@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A Badrinath Reddy | Full-Stack Developer & ML Enthusiast</title>
+    <!-- Load Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Load Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        /* Custom styles for professional, dynamic UI */
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f8fafc; /* Light background */
+            color: #1e293b; /* Dark text */
+        }
+        /* Gradient for the Hero section background */
+        .hero-gradient {
+            /* A deep, tech-inspired gradient */
+            background-image: linear-gradient(to right bottom, #111827, #1f2937);
+        }
+        /* Header shadow for depth */
+        .header-shadow {
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+        }
+        /* Dynamic Project card hover effect */
+        .project-card {
+            transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+            border-left: 4px solid transparent;
+        }
+        .project-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+            border-left-color: #3b82f6; /* Blue-500 hover highlight */
+        }
+        /* Style for the skill chip hover */
+        .skill-chip {
+            transition: all 0.2s;
+        }
+        .skill-chip:hover {
+            background-color: #3b82f6; /* Blue-500 */
+            color: white;
+            transform: scale(1.05);
+            box-shadow: 0 2px 8px rgba(59, 130, 246, 0.5);
+        }
+    </style>
+</head>
+<body>
+
+    <!-- 1. Header & Navigation (Fixed, Clean Design) -->
+    <header class="sticky top-0 z-50 bg-white header-shadow transition duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <!-- Logo/Name -->
+                <a href="#" class="flex items-center space-x-2">
+                    <span data-lucide="monitor-dot" class="w-6 h-6 text-blue-600"></span>
+                    <span class="text-xl font-extrabold text-gray-900 tracking-wider">BADRINATH.DEV</span>
+                </a>
+
+                <!-- Desktop Menu -->
+                <nav class="hidden md:flex space-x-8">
+                    <a href="#about" class="text-gray-600 hover:text-blue-600 transition duration-150 font-medium">About</a>
+                    <a href="#skills" class="text-gray-600 hover:text-blue-600 transition duration-150 font-medium">Expertise</a>
+                    <a href="#projects" class="text-gray-600 hover:text-blue-600 transition duration-150 font-medium">Projects</a>
+                    <a href="#experience" class="text-gray-600 hover:text-blue-600 transition duration-150 font-medium">Journey</a>
+                </nav>
+
+                <!-- Contact CTA (Email/LinkedIn) -->
+                <div class="hidden md:flex space-x-4 items-center">
+                    <a href="https://github.com/BadriNath-2004" target="_blank" class="text-gray-600 hover:text-blue-600 transition duration-200" title="GitHub">
+                        <span data-lucide="github" class="w-6 h-6"></span>
+                    </a>
+                    <a href="#contact" class="px-4 py-1.5 bg-blue-600 text-white font-semibold rounded-lg shadow-lg hover:bg-blue-700 transition duration-200">
+                        Get In Touch
+                    </a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <button id="mobile-menu-button" class="md:hidden p-2 rounded-lg text-gray-600 hover:bg-gray-100 transition duration-150">
+                    <span data-lucide="menu" class="w-6 h-6"></span>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Menu Panel (Initially Hidden) -->
+        <div id="mobile-menu-panel" class="hidden md:hidden bg-white border-t border-gray-100">
+            <nav class="px-2 pt-2 pb-3 space-y-1">
+                <a href="#about" class="mobile-link block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-blue-50 hover:text-blue-600">About</a>
+                <a href="#skills" class="mobile-link block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-blue-50 hover:text-blue-600">Expertise</a>
+                <a href="#projects" class="mobile-link block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-blue-50 hover:text-blue-600">Projects</a>
+                <a href="#experience" class="mobile-link block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-blue-50 hover:text-blue-600">Journey</a>
+                <a href="#contact" class="mobile-link block w-full px-3 py-2 rounded-md bg-blue-600 text-white font-semibold hover:bg-blue-700 transition duration-200 mt-2 text-center">
+                    Get In Touch
+                </a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- 2. Hero Section (MERN Focus) -->
+        <section id="hero" class="py-20 sm:py-32 text-center text-white hero-gradient shadow-2xl">
+            <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+                <h1 class="text-4xl sm:text-6xl font-extrabold tracking-tight leading-tight mb-3">
+                    A Badrinath Reddy
+                </h1>
+                <p class="max-w-3xl mx-auto text-xl sm:text-2xl font-light text-blue-200 mb-8">
+                    Full-Stack Developer | **MERN Stack Specialist** focused on scalable systems and data-driven solutions.
+                </p>
+                <div class="space-x-4">
+                    <a href="#projects" class="inline-block px-8 py-3 bg-blue-500 text-white font-bold text-lg rounded-xl shadow-lg shadow-blue-500/50 hover:bg-blue-600 transition duration-300">
+                        Explore My Work
+                    </a>
+                    <a href="mailto:codebadri2004@gmail.com" class="inline-block px-8 py-3 bg-transparent border-2 border-blue-400 text-blue-200 font-bold text-lg rounded-xl hover:bg-blue-800 transition duration-300 mt-4 sm:mt-0">
+                        Email Me
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- 3. About Me Section (Resume Summary) -->
+        <section id="about" class="py-16 sm:py-24">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="lg:grid lg:grid-cols-3 lg:gap-12 items-start">
+                    <div class="col-span-1 mb-8 lg:mb-0 border-l-4 border-blue-500 pl-4">
+                        <span class="text-blue-600 font-semibold uppercase tracking-wider">01. Who I Am</span>
+                        <h2 class="mt-2 text-3xl font-bold text-gray-900">Dedicated Full-Stack & ML Enthusiast</h2>
+                    </div>
+                    <div class="col-span-2 text-lg text-gray-700 space-y-4">
+                        <p>
+                            I am a passionate B.Tech student in Computer Science (GPA: 9.38/10) with hands-on experience in building **scalable and responsive web applications** using the **MERN stack (MongoDB, Express.js, React.js, Node.js)**.
+                        </p>
+                        <p>
+                            My goal is to integrate robust backend logic with clean, modular front-end design, as showcased in my capstone **Zero Waste** project. I also possess a strong foundational knowledge in **Data Structures, Algorithms, and Machine Learning**, having developed models for **Soil Quality Prediction** using Python. I prioritize performance, maintainability, and accessibility in all my projects.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 4. Skills Section (Grouped by Category) -->
+        <section id="skills" class="py-16 sm:py-24 bg-gray-100 border-t border-b border-gray-200">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-12">
+                    <span class="text-blue-600 font-semibold uppercase tracking-widest">02. CORE TOOLBOX</span>
+                    <h2 class="mt-2 text-4xl font-extrabold text-gray-900">Technical Expertise</h2>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <!-- Category 1: Frontend & Design -->
+                    <div class="p-6 bg-white rounded-2xl shadow-xl transition duration-300 hover:shadow-2xl">
+                        <span data-lucide="layout-grid" class="w-8 h-8 text-blue-500 mb-3"></span>
+                        <h3 class="text-xl font-bold text-gray-900 mb-4">Frontend Frameworks</h3>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="skill-chip px-3 py-1 text-sm font-medium text-blue-700 bg-blue-100 rounded-full">React.js</span>
+                            <span class="skill-chip px-3 py-1 text-sm font-medium text-gray-700 bg-gray-200 rounded-full">HTML</span>
+                            <span class="skill-chip px-3 py-1 text-sm font-medium text-gray-700 bg-gray-200 rounded-full">CSS</span>
+                            <span class="skill-chip px-3 py-1 text-sm font-medium text-gray-700 bg-gray-200 rounded-full">JavaScript</span>
+                            <span class="skill-chip px-3 py-1 text-sm font-medium text-green-700 bg-green-100 rounded-full">Tailwind CSS</span>
+                        </div>
+                    </div>
+
+                    <!-- Category 2: Backend & Database (MERN/SQL) -->
+                    <div class="p-6 bg-white rounded-2xl shadow-xl transition duration-300 hover:shadow-2xl">
+                        <span data-lucide="server" class="w-8 h-8 text-green-500 mb-3"></span>
+                        <h3 class="text-xl font-bold text-gray-900 mb-4">Backend & Data</h3>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="skill-chip px-3 py-1 text-sm font-medium text-green-700 bg-green-100 rounded-full">Node.js</span>
+                            <span class="skill-chip px-3 py-1 text-sm font-medium text-green-700 bg-green-100 rounded-full">Express.js</span>
+                            <span class="skill-chip px-3 py-1 text-sm font-medium text-red-700 bg-red-100 rounded-full">MongoDB</span>
+                            <span class="skill-chip px-3 py-1 text-sm font-medium text-red-700 bg-red-100 rounded-full">MySQL / SQL</span>
+                            <span class="skill-chip px-3 py-1 text-sm font-medium text-gray-700 bg-gray-200 rounded-full">Python / Flask</span>
+                        </div>
+                    </div>
+
+                    <!-- Category 3: Fundamentals & Tools -->
+                    <div class="p-6 bg-white rounded-2xl shadow-xl transition duration-300 hover:shadow-2xl">
+                        <span data-lucide="puzzle" class="w-8 h-8 text-indigo-500 mb-3"></span>
+                        <h3 class="text-xl font-bold text-gray-900 mb-4">CS & Development Tools</h3>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="skill-chip px-3 py-1 text-sm font-medium text-indigo-700 bg-indigo-100 rounded-full">Data Structures & Algo</span>
+                            <span class="skill-chip px-3 py-1 text-sm font-medium text-indigo-700 bg-indigo-100 rounded-full">OOP (Java)</span>
+                            <span class="skill-chip px-3 py-1 text-sm font-medium text-gray-700 bg-gray-200 rounded-full">Git / GitHub</span>
+                            <span class="skill-chip px-3 py-1 text-sm font-medium text-gray-700 bg-gray-200 rounded-full">DBMS / OS / CN</span>
+                            <span class="skill-chip px-3 py-1 text-sm font-medium text-gray-700 bg-gray-200 rounded-full">Excel</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 5. Projects Section (Detailed Cards) -->
+        <section id="projects" class="py-16 sm:py-24">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-12">
+                    <span class="text-blue-600 font-semibold uppercase tracking-widest">03. PORTFOLIO HIGHLIGHTS</span>
+                    <h2 class="mt-2 text-4xl font-extrabold text-gray-900">Featured Web & ML Projects</h2>
+                </div>
+
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-10">
+
+                    <!-- Project 1: Zero Waste (Full-Stack MERN) -->
+                    <div class="project-card p-8 bg-white rounded-2xl shadow-xl border border-gray-100">
+                        <div class="flex justify-between items-start mb-4">
+                            <h3 class="text-2xl font-bold text-gray-900">Zero Waste</h3>
+                            <span data-lucide="leaf" class="w-8 h-8 text-green-600"></span>
+                        </div>
+                        <p class="text-gray-600 text-md mb-4 font-semibold">Geo-Intelligent Food Donation & Rescue System (MERN)</p>
+                        
+                        <div class="mb-4 flex flex-wrap gap-2">
+                            <span class="px-3 py-1 text-xs font-medium text-blue-700 bg-blue-100 rounded-full">React (Vite)</span>
+                            <span class="px-3 py-1 text-xs font-medium text-green-700 bg-green-100 rounded-full">Node/Express</span>
+                            <span class="px-3 py-1 text-xs font-medium text-red-700 bg-red-100 rounded-full">MongoDB</span>
+                        </div>
+
+                        <ul class="list-disc list-inside space-y-2 text-gray-700 ml-4">
+                            <li><span class="font-medium text-gray-900">Donor Portal:</span> Developed interface with image upload, manual quantity input, and auto-filled pickup location.</li>
+                            <li><span class="font-medium text-gray-900">Receiver/Admin:</span> Built portal for viewing donations, tracking delivery status, and visualizing key metrics (food rescued, carbon emissions) via charts and maps.</li>
+                            <li><span class="font-medium text-gray-900">API:</span> Implemented RESTful APIs for secure user management, food posts, and logistics handling.</li>
+                        </ul>
+                        <a href="https://github.com/BadriNath-2004/Zero_Waste" class="mt-6 inline-flex items-center text-blue-600 font-bold hover:text-blue-800 transition duration-150">
+                            <span class="mr-2">View Project Details &rarr;</span> 
+                            <span data-lucide="external-link" class="w-4 h-4"></span>
+                        </a>
+                    </div>
+
+                    <!-- Project 2: Soil Quality Prediction (ML/Python) -->
+                    <div class="project-card p-8 bg-white rounded-2xl shadow-xl border border-gray-100">
+                        <div class="flex justify-between items-start mb-4">
+                            <h3 class="text-2xl font-bold text-gray-900">Soil Quality Prediction</h3>
+                            <span data-lucide="test-tube-2" class="w-8 h-8 text-indigo-600"></span>
+                        </div>
+                        <p class="text-gray-600 text-md mb-4 font-semibold">Machine Learning Model with Flask Web Interface</p>
+                        
+                        <div class="mb-4 flex flex-wrap gap-2">
+                            <span class="px-3 py-1 text-xs font-medium text-yellow-700 bg-yellow-100 rounded-full">Python</span>
+                            <span class="px-3 py-1 text-xs font-medium text-indigo-700 bg-indigo-100 rounded-full">Scikit-learn</span>
+                            <span class="px-3 py-1 text-xs font-medium text-gray-700 bg-gray-200 rounded-full">Flask Web App</span>
+                        </div>
+
+                        <ul class="list-disc list-inside space-y-2 text-gray-700 ml-4">
+                            <li><span class="font-medium text-gray-900">Model:</span> Developed an ML model to predict soil quality index based on parameters.</li>
+                            <li><span class="font-medium text-gray-900">Optimization:</span> Implemented Random Forest with **Elephant Herding Optimization (EHO)** for superior accuracy.</li>
+                            <li><span class="font-medium text-gray-900">Deployment:</span> Built a Flask-based application for users to upload soil data and get real-time predictions.</li>
+                            <li><span class="font-medium text-gray-900">Visualization:</span> Utilized Matplotlib for pattern visualization, enhancing interpretability.</li>
+                        </ul>
+                        <a href="https://github.com/BadriNath-2004/Soil-Quality-Prediction" class="mt-6 inline-flex items-center text-blue-600 font-bold hover:text-blue-800 transition duration-150">
+                            <span class="mr-2">View Code Snippets &rarr;</span> 
+                            <span data-lucide="external-link" class="w-4 h-4"></span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 6. Experience & Education Timeline -->
+        <section id="experience" class="py-16 sm:py-24 bg-gray-50 border-t border-b border-gray-200">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-12">
+                    <span class="text-blue-600 font-semibold uppercase tracking-widest">04. MY JOURNEY</span>
+                    <h2 class="mt-2 text-4xl font-extrabold text-gray-900">Education & Professional Experience</h2>
+                </div>
+                
+                <div class="relative max-w-3xl mx-auto">
+                    <!-- Vertical Line -->
+                    <div class="absolute left-1/2 -ml-0.5 w-1 bg-gray-300 h-full hidden sm:block"></div>
+
+                    <!-- Timeline Item 1: ITVISION360 Internship (Right) -->
+                    <div class="relative mb-8 sm:mb-16 flex items-center w-full">
+                        <!-- Connector Dot -->
+                        <div class="absolute z-10 w-4 h-4 rounded-full bg-blue-600 border-4 border-white left-1/2 -ml-2 hidden sm:block shadow-md"></div>
+                        <div class="w-full sm:w-1/2 sm:pr-8 sm:text-right">
+                            <div class="p-6 bg-white rounded-xl shadow-lg border border-gray-200 transition duration-300 hover:shadow-xl">
+                                <span class="text-sm font-semibold text-gray-500">May 2025 - July 2025</span>
+                                <h3 class="text-xl font-bold text-gray-900 mt-1">Web Developer Intern</h3>
+                                <p class="text-blue-600 font-medium">ITVISION360 India Pvt. Ltd., Hyderabad</p>
+                                <ul class="list-disc list-inside space-y-1 text-sm text-gray-700 mt-2">
+                                    <li>Assisted in developing responsive web pages using **React.js and Tailwind CSS**.</li>
+                                    <li>Collaborated on Backend integration using **Node.js and MongoDB** for dynamic data handling.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Timeline Item 2: AICTE Virtual Internship (Left) -->
+                    <div class="relative mb-8 sm:mb-16 flex items-center w-full">
+                        <!-- Connector Dot -->
+                        <div class="absolute z-10 w-4 h-4 rounded-full bg-blue-600 border-4 border-white left-1/2 -ml-2 hidden sm:block shadow-md"></div>
+                        <div class="w-full sm:w-1/2 sm:pl-8 sm:order-2">
+                            <div class="p-6 bg-white rounded-xl shadow-lg border border-gray-200 transition duration-300 hover:shadow-xl">
+                                <span class="text-sm font-semibold text-gray-500">Oct 2024 - Dec 2024</span>
+                                <h3 class="text-xl font-bold text-gray-900 mt-1">Frontend Developer Intern</h3>
+                                <p class="text-blue-600 font-medium">AICTE Virtual Program (Eduskills Academy)</p>
+                                <ul class="list-disc list-inside space-y-1 text-sm text-gray-700 mt-2">
+                                    <li>Developed fully responsive interfaces with **React.js, HTML, CSS, and JavaScript**.</li>
+                                    <li>Built reusable UI components, enhancing maintainability and scalability.</li>
+                                    <li>Enhanced UI performance and cross-browser compatibility.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Timeline Item 3: B.Tech Education (Right) -->
+                    <div class="relative mb-8 sm:mb-16 flex items-center w-full">
+                        <!-- Connector Dot -->
+                        <div class="absolute z-10 w-4 h-4 rounded-full bg-blue-600 border-4 border-white left-1/2 -ml-2 hidden sm:block shadow-md"></div>
+                        <div class="w-full sm:w-1/2 sm:pr-8 sm:text-right">
+                            <div class="p-6 bg-white rounded-xl shadow-lg border border-gray-200 transition duration-300 hover:shadow-xl">
+                                <span class="text-sm font-semibold text-gray-500">Oct 2022 - Jun 2026 (Expected)</span>
+                                <h3 class="text-xl font-bold text-gray-900 mt-1">B.Tech in Computer Science</h3>
+                                <p class="text-blue-600 font-medium">Mohan Babu University, Tirupati</p>
+                                <p class="text-md font-bold text-gray-800 mt-2">GPA: 9.38/10</p>
+                                <p class="text-sm text-gray-700">Focus on Data Structures, Algorithms, OOP, and DBMS.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- 7. Achievements & Certifications (New Section) -->
+        <section id="achievements" class="py-16 sm:py-24">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-12">
+                    <span class="text-blue-600 font-semibold uppercase tracking-widest">05. RECOGNITION</span>
+                    <h2 class="mt-2 text-4xl font-extrabold text-gray-900">Key Achievements & Leadership</h2>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    
+                    <!-- Achievement 1: Hackathon -->
+                    <div class="flex flex-col items-center text-center p-6 bg-white rounded-xl shadow-md transition duration-300 hover:shadow-lg hover:bg-blue-50">
+                        <span data-lucide="trophy" class="w-10 h-10 text-yellow-500 mb-3"></span>
+                        <h3 class="text-lg font-bold text-gray-900">Hackathon Participant</h3>
+                        <p class="text-sm text-gray-600 mt-1">24-Hour Hackathon conducted by XHorizon at University.</p>
+                    </div>
+
+                    <!-- Achievement 2: IIM Course -->
+                    <div class="flex flex-col items-center text-center p-6 bg-white rounded-xl shadow-md transition duration-300 hover:shadow-lg hover:bg-blue-50">
+                        <span data-lucide="award" class="w-10 h-10 text-red-500 mb-3"></span>
+                        <h3 class="text-lg font-bold text-gray-900">Leadership & Innovation Course</h3>
+                        <p class="text-sm text-gray-600 mt-1">Completed course from IIM Ahmedabad (IIMA).</p>
+                    </div>
+
+                    <!-- Achievement 3: Leadership Project -->
+                    <div class="flex flex-col items-center text-center p-6 bg-white rounded-xl shadow-md transition duration-300 hover:shadow-lg hover:bg-blue-50">
+                        <span data-lucide="users" class="w-10 h-10 text-teal-500 mb-3"></span>
+                        <h3 class="text-lg font-bold text-gray-900">Web Development Group Lead</h3>
+                        <p class="text-sm text-gray-600 mt-1">Led a mini-project for a Movie Booking website frontend.</p>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+
+        <!-- 8. Contact Section (Standard Form) -->
+        <section id="contact" class="py-16 sm:py-24 bg-blue-600">
+            <div class="max-w-xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-8">
+                    <h2 class="text-3xl font-bold text-white">Let's Connect</h2>
+                    <p class="mt-2 text-lg text-blue-200">
+                        I'm currently seeking new opportunities. Reach out to discuss my projects or potential roles!
+                    </p>
+                </div>
+
+                <!-- Contact Form (Simulated Submission) -->
+                <form id="contact-form" class="bg-white p-8 rounded-2xl shadow-2xl space-y-5">
+                    <div>
+                        <label for="name" class="block text-sm font-medium text-gray-700 mb-1">Your Name</label>
+                        <input type="text" id="name" name="name" required class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-blue-500 focus:border-blue-500">
+                    </div>
+                    <div>
+                        <label for="email" class="block text-sm font-medium text-gray-700 mb-1">Your Email</label>
+                        <input type="email" id="email" name="email" required class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-blue-500 focus:border-blue-500">
+                    </div>
+                    <div>
+                        <label for="message" class="block text-sm font-medium text-gray-700 mb-1">Message</label>
+                        <textarea id="message" name="message" rows="4" required class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-blue-500 focus:border-blue-500"></textarea>
+                    </div>
+
+                    <button type="submit" id="submit-button" class="w-full px-6 py-3 bg-blue-600 text-white font-bold text-lg rounded-lg shadow-md hover:bg-blue-700 transition duration-300">
+                        Send Message
+                    </button>
+
+                    <!-- Submission Message Container (Initially hidden) -->
+                    <div id="form-message" class="hidden p-3 rounded-lg text-center font-medium mt-4" role="alert"></div>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <!-- 9. Footer -->
+    <footer class="bg-gray-800 text-white py-8">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <p class="text-sm text-gray-400">
+                A Badrinath Reddy | Full-Stack Developer | codebadri2004@gmail.com
+            </p>
+            <p class="text-xs text-gray-500 mt-1">
+                &copy; <span id="current-year"></span>. Portfolio built using modern HTML, Tailwind CSS, and JS.
+            </p>
+        </div>
+    </footer>
+
+    <!-- JavaScript for Basic Interactivity and Polish -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Initialize Lucide icons
+            lucide.createIcons();
+            document.getElementById('current-year').textContent = new Date().getFullYear();
+
+            // --- 1. Mobile Menu Toggle ---
+            const mobileMenuButton = document.getElementById('mobile-menu-button');
+            const mobileMenuPanel = document.getElementById('mobile-menu-panel');
+            const mobileLinks = document.querySelectorAll('.mobile-link');
+
+            mobileMenuButton.addEventListener('click', () => {
+                const isHidden = mobileMenuPanel.classList.toggle('hidden');
+                // Change icon from menu to X when open
+                const icon = mobileMenuButton.querySelector('svg');
+                icon.setAttribute('data-lucide', isHidden ? 'menu' : 'x');
+                lucide.createIcons(); // Re-render icon
+            });
+
+            // Close mobile menu when a link is clicked
+            mobileLinks.forEach(link => {
+                link.addEventListener('click', () => {
+                    mobileMenuPanel.classList.add('hidden');
+                    // Reset icon to menu
+                    mobileMenuButton.querySelector('svg').setAttribute('data-lucide', 'menu');
+                    lucide.createIcons();
+                });
+            });
+
+
+            // --- 2. Simulated Contact Form Submission ---
+            const contactForm = document.getElementById('contact-form');
+            const submitButton = document.getElementById('submit-button');
+            const formMessage = document.getElementById('form-message');
+
+            contactForm.addEventListener('submit', (e) => {
+                e.preventDefault();
+
+                // Retrieve name for personalized message
+                const nameInput = document.getElementById('name').value.trim() || 'Valued Visitor';
+
+                submitButton.disabled = true;
+                submitButton.textContent = 'Sending...';
+
+                setTimeout(() => {
+                    // Success message
+                    formMessage.textContent = `Thank you, ${nameInput}! I've received your message and will be in touch shortly.`;
+                    formMessage.className = 'p-3 rounded-lg text-center font-medium text-green-800 bg-green-100';
+                    formMessage.classList.remove('hidden');
+
+                    // Reset form and button
+                    contactForm.reset();
+                    submitButton.disabled = false;
+                    submitButton.textContent = 'Send Message';
+
+                    // Hide message after 5 seconds
+                    setTimeout(() => {
+                        formMessage.classList.add('hidden');
+                    }, 5000);
+
+                }, 1500); // Simulated 1.5 second network delay
+            });
+        });
+    </script>
+</body>
+</html>
